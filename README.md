@@ -3,7 +3,7 @@
 Aplicación Android desarrollada en **Java** para la actividad práctica de aula.
 Equipo de **23 integrantes**.
 
-> Este README lo completa **P22**. La plantilla completa está en la guía `Guia_Registro_Multimedia_23_integrantes.docx` (en la raíz de este repositorio).
+> Este README lo completa **P23**. La plantilla completa está en la guía `Guia_Registro_Multimedia_23_integrantes.docx` (en la raíz de este repositorio).
 
 ---
 
@@ -22,7 +22,7 @@ Para comprobar que quedó: entra a tu carpeta, tu archivo debe aparecer con **tu
 ## Las 3 reglas que no se rompen
 
 1. Subes **solo a tu carpeta**. Nunca a la de otro, nunca a `app_final/`.
-2. Solo **P19** escribe en `MainActivity.java`. Solo **P3** escribe en `activity_main.xml`. Los demás entregan su parte en un archivo de texto.
+2. Cada archivo tiene **un solo dueño**: `MainActivity.java` es de **P6**, `activity_main.xml` de **P16**, `GrabadorAudio.java` de **P1** e `IntegranteAdapter.java` de **P10**. Si tu tarea es un método suelto, lo entregas en un `.txt` a **P7**.
 3. Nunca cambies los nombres de los `id` del XML (`checkJava`, `ratingBar`, `recyclerIntegrantes`...). El código de tus compañeros depende de ellos.
 
 ## Estructura del repositorio
@@ -31,38 +31,52 @@ Para comprobar que quedó: entra a tu carpeta, tu archivo debe aparecer con **tu
 registro-multimedia-equipo/
 ├── entregas/        <- cada uno sube aquí, en su propia carpeta
 │   ├── P01/ ... P23/
-├── app_final/       <- SOLO P19: la app terminada en ZIP
-├── capturas/        <- SOLO P21: capturas y evidencias
+├── app_final/       <- SOLO P6: la app terminada en ZIP
+├── capturas/        <- SOLO P22: capturas y evidencias
 └── README.md
 ```
 
 ## Quién hace qué
 
-| N° | Nombre | Equipo | Tarea | Archivo del que es dueño |
-|---|---|---|---|---|
-| P01 | | Estructura base | Creador del proyecto | `Proyecto completo (base inicial)` |
-| P02 | | Estructura base | Dependencias del proyecto | `build.gradle.kts (Module :app)` |
-| P03 | | Estructura base | Permiso y esqueleto de pantalla | `AndroidManifest.xml + activity_main.xml` |
-| P04 | | Controles de selección | CheckBox y RadioButton (XML) | `Bloque XML para activity_main.xml` |
-| P05 | | Controles de selección | Spinner y lista de carreras | `Bloque XML + res/values/strings.xml` |
-| P06 | | Controles de selección | Lógica Java de los controles | `Métodos Java (se pegan en MainActivity)` |
-| P07 | | Valoración y progreso | RatingBar y ProgressBar (XML) | `Bloque XML para activity_main.xml` |
-| P08 | | Valoración y progreso | Cálculo del avance | `Método Java (se pega en MainActivity)` |
-| P09 | | Valoración y progreso | Listeners que disparan el avance | `Método Java (se pega en MainActivity)` |
-| P10 | | Lista dinámica | Modelo de datos | `Integrante.java` |
-| P11 | | Lista dinámica | Tarjeta del listado | `item_integrante.xml + bloque RecyclerView` |
-| P12 | | Lista dinámica | Adapter y ViewHolder | `IntegranteAdapter.java` |
-| P13 | | Audio | Clase de grabación | `GrabadorAudio.java` |
-| P14 | | Audio | Permiso en tiempo de ejecución | `Métodos Java (se pegan en MainActivity)` |
-| P15 | | Audio | Botones de audio y prueba real | `Bloque XML + método Java` |
-| P16 | | Diseño, validaciones y resumen | Identidad visual y recursos | `res/values/colors.xml + res/drawable/` |
-| P17 | | Diseño, validaciones y resumen | Validación del formulario | `Método Java (se pega en MainActivity)` |
-| P18 | | Diseño, validaciones y resumen | Resumen estadístico del equipo | `Método Java (se pega en MainActivity)` |
-| P19 | | Integración y QA | Integrador (arma la app) | `MainActivity.java` |
-| P20 | | Integración y QA | Tester / control de calidad | `Informe de pruebas` |
-| P21 | | Integración y QA | Evidencias y exposición | `Carpeta de evidencias` |
-| P22 | | Documentación y repositorio | Documentación del proyecto | `README.md del repositorio` |
-| P23 | | Documentación y repositorio | Administrador del repositorio | `Repositorio de GitHub` |
+Los grupos están **ordenados por dificultad**: mientras más bajo el número, más pesada la tarea.
+Los números bajos (P1–P11) son para quienes más manejan Java; los altos (P19–P23) son los más livianos.
+
+| Grupo | Dificultad | Personas |
+|---|---|---|
+| G1 · Audio (P1–P5) | 5 de 5 | 5 |
+| G2 · Integración (P6–P7) | 5 de 5 | 2 |
+| G3 · Lista / RecyclerView (P8–P11) | 4 de 5 | 4 |
+| G4 · Valoración y progreso (P12–P14) | 3 de 5 | 3 |
+| G5 · Estructura base (P15–P16) | 2 de 5 | 2 |
+| G6 · Controles de selección (P17–P18) | 2 de 5 | 2 |
+| G7 · Lógica adicional (P19–P20) | 2 de 5 | 2 |
+| G8 · Calidad y cierre (P21–P23) | 1 de 5 | 3 |
+
+| N° | Nombre | Dif. | Grupo | Tarea | Archivo del que es dueño |
+|---|---|---|---|---|---|
+| P01 | | 5/5 | G1 · Audio | Grabación de audio (dueño del archivo) | `GrabadorAudio.java` |
+| P02 | | 5/5 | G1 · Audio | Reproducción y liberación de recursos | `Métodos Java (se pegan en GrabadorAudio.java)` |
+| P03 | | 5/5 | G1 · Audio | Permiso del micrófono en tiempo de ejecución | `Métodos Java (se pegan en MainActivity)` |
+| P04 | | 5/5 | G1 · Audio | Botones de audio y su lógica | `Bloque XML + método Java` |
+| P05 | | 5/5 | G1 · Audio | Pruebas de audio en dispositivo | `Informe de pruebas de audio` |
+| P06 | | 5/5 | G2 · Integración | Integrador (arma la app) | `MainActivity.java` |
+| P07 | | 5/5 | G2 · Integración | Copiloto de integración | `Checklist de métodos recibidos` |
+| P08 | | 4/5 | G3 · Lista dinámica (RecyclerView) | Modelo de datos | `Integrante.java` |
+| P09 | | 4/5 | G3 · Lista dinámica (RecyclerView) | Tarjeta del listado (CardView) | `item_integrante.xml + bloque RecyclerView` |
+| P10 | | 4/5 | G3 · Lista dinámica (RecyclerView) | Adapter (dueño del archivo) | `IntegranteAdapter.java` |
+| P11 | | 4/5 | G3 · Lista dinámica (RecyclerView) | ViewHolder y crecimiento de la lista | `Clase interna + método (se pegan en IntegranteAdapter.java)` |
+| P12 | | 3/5 | G4 · Valoración y progreso | RatingBar y ProgressBar (XML) | `Bloque XML para activity_main.xml` |
+| P13 | | 3/5 | G4 · Valoración y progreso | Cálculo del avance | `Método Java (se pega en MainActivity)` |
+| P14 | | 3/5 | G4 · Valoración y progreso | Listeners que disparan el avance | `Método Java (se pega en MainActivity)` |
+| P15 | | 2/5 | G5 · Estructura base | Creación del proyecto y dependencias | `Proyecto base + build.gradle.kts` |
+| P16 | | 2/5 | G5 · Estructura base | Permiso, esqueleto de pantalla y armado del XML | `AndroidManifest.xml + activity_main.xml` |
+| P17 | | 2/5 | G6 · Controles de selección | CheckBox, RadioButton y Spinner (XML) | `Bloque XML + res/values/strings.xml` |
+| P18 | | 2/5 | G6 · Controles de selección | Lógica Java de los controles | `Métodos Java (se pegan en MainActivity)` |
+| P19 | | 2/5 | G7 · Lógica adicional | Validación del formulario | `Método Java (se pega en MainActivity)` |
+| P20 | | 2/5 | G7 · Lógica adicional | Resumen estadístico del equipo | `Método Java (se pega en MainActivity)` |
+| P21 | | 1/5 | G8 · Calidad y cierre | Tester / control de calidad | `Informe de pruebas` |
+| P22 | | 1/5 | G8 · Calidad y cierre | Evidencias y exposición | `Carpeta de evidencias` |
+| P23 | | 1/5 | G8 · Calidad y cierre | Administrador del repositorio, README y diseño visual | `Repositorio de GitHub + colors.xml + README.md` |
 
 ## La aplicación
 
